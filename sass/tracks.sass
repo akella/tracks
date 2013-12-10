@@ -1,0 +1,44 @@
+@import lib/base
+@import reset
+
+
+body
+	background: #363636 
+.tracks
+	background: #252525
+	border-bottom: 1px solid #181818  
+	box-shadow: 0 2px 4px rgba(#000, .2)
+	.tracks__more
+		color: #CCCCCC
+		text-shadow: 0 -1px 0 #000 
+		display: block
+		padding: 6px 10px
+		text-decoration: underline
+		font-size: 10px 
+.track
+	height: 20px 
+	border-bottom: 1px solid #3D3D3D 
+	box-shadow: 0 1px 0 #1E1E1E
+	position: relative
+	.track__data
+		position: relative
+		top: 3px 
+		height: 14px 
+		background: url(../img/tracks.png) repeat 0 0
+		z-index: 1 
+	.track__title
+		color: #B3B3B3 
+		font-size: 10px 
+		padding: 3px 
+		background: rgba(#000, .7) 
+		+transition(all .2s ease-in-out)
+		z-index: 2 
+		line-height: 1 
+		position: absolute
+		left: 4px 
+		top: 1px 
+		border-radius: 4px
+	&:hover
+		.track__title
+			left: 15px 
+	
