@@ -1,13 +1,13 @@
 @import lib/base
 @import reset
-
-
 body
 	background: #363636 
 .tracks
 	background: #252525
 	border-bottom: 1px solid #181818  
 	box-shadow: 0 2px 4px rgba(#000, .2)
+	
+	
 	.tracks__more
 		color: #CCCCCC
 		text-shadow: 0 -1px 0 #000 
@@ -20,6 +20,17 @@ body
 	border-bottom: 1px solid #3D3D3D 
 	box-shadow: 0 1px 0 #1E1E1E
 	position: relative
+	&.unused
+		height: 0
+		overflow: hidden 
+		box-shadow: none
+		border: none
+		+transition(all .2s ease-in-out)
+	.is-unused_visible &
+		height: 20px 
+		overflow: visible
+		border-bottom: 1px solid #3D3D3D 
+		box-shadow: 0 1px 0 #1E1E1E
 	.track__data
 		position: relative
 		top: 3px 
@@ -36,9 +47,10 @@ body
 		line-height: 1 
 		position: absolute
 		left: 4px 
-		top: 1px 
+		top: 2px 
 		border-radius: 4px
 	&:hover
 		.track__title
-			left: 15px 
+			top: -14px 
+			+transform(rotate(-2deg))
 	
